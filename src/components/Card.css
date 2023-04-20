@@ -2,3 +2,18 @@
   background-color: #fff;
   border-radius: 4px;
 }
+
+.card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.card ul li::before {
+  content: attr(data-icon);
+  /* Make slightly larger than the li font-size
+  but smaller than the li gap */
+  font-size: 1.25em;
+}

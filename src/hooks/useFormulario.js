@@ -10,7 +10,11 @@ const useFormulario = (inicial) => {
     });
   };
 
-  return [dataForm, handleChange];
+  const reset = () => {
+    setDataForm(inicial);
+  };
+
+  return [dataForm, handleChange, reset];
 };
 
 export default useFormulario;
