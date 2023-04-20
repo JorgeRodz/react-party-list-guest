@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const useFormulario = (inicial) => {
   const [dataForm, setDataForm] = useState(inicial);
+
   const handleChange = (e) => {
     setDataForm({
       ...dataForm,
