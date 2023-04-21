@@ -1,14 +1,23 @@
 .card {
   background-color: #fff;
+  background-color: #302244;
   border-radius: 4px;
+}
+
+.card h2 {
+  margin: 0;
+  color: #eee;
+  padding-left: 20px;
+  padding-top: 25px;
 }
 
 .card ul {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   list-style: none;
   display: grid;
   gap: 1rem;
+  color: #eee;
 }
 
 .card ul li::before {

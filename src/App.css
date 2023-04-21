@@ -1,7 +1,9 @@
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -42,4 +44,10 @@ html {
   to {
     transform: rotate(360deg);
   }
+}
+
+.main_title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
 }

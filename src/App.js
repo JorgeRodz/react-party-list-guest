@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import { useState } from "react";
 import useFormulario from "./hooks/useFormulario";
 import Input from "./components/Input";
@@ -23,49 +24,61 @@ const App = () => {
   };
 
   return (
-    <Container>
-      <Card>
-        <div style={{ padding: 20 }}>
-          <form onSubmit={submit}>
-            <Input
-              label="Nombre"
-              name="name"
-              onChange={handleChange}
-              placeholder="nombre"
-              type="text"
-              value={dataForm.name}
-            />
-            <Input
-              label="Apellido"
-              name="lastname"
-              onChange={handleChange}
-              placeholder="apellido"
-              type="text"
-              value={dataForm.lastname}
-            />
-            <Input
-              label="Correo"
-              name="email"
-              onChange={handleChange}
-              placeholder="email"
-              type="email"
-              value={dataForm.email}
-            />
-            <Button>Enviar</Button>
-          </form>
-        </div>
-      </Card>
-      <Card>
-        <ul>
-          {usuarios.map((usuario) => (
-            <li
-              data-icon="🧑‍💻"
-              key={usuario.email}
-            >{`  ${usuario.name} ${usuario.lastname}: 📧  ${usuario.email}`}</li>
-          ))}
-        </ul>
-      </Card>
-    </Container>
+    <div style={{ marginTop: "5%" }}>
+      <h1 className="main_title">🎉 Party List 🗒️</h1>
+      <Container>
+        <Card>
+          <div style={{ padding: 20 }}>
+            <form onSubmit={submit}>
+              <Input
+                label="Nombre"
+                name="name"
+                onChange={handleChange}
+                placeholder="Nombre"
+                type="text"
+                value={dataForm.name}
+              />
+              <Input
+                label="Apellido"
+                name="lastname"
+                onChange={handleChange}
+                placeholder="Apellido"
+                type="text"
+                value={dataForm.lastname}
+              />
+              <Input
+                label="Correo"
+                name="email"
+                onChange={handleChange}
+                placeholder="Email"
+                type="email"
+                value={dataForm.email}
+              />
+              <Button>Enviar</Button>
+            </form>
+          </div>
+        </Card>
+        <Card>
+          <h2>
+            <span style={{ display: "inline-block", paddingRight: "10px" }}>
+              📝
+            </span>
+            My guest list
+            <span style={{ display: "inline-block", paddingLeft: "10px" }}>
+              ✅
+            </span>
+          </h2>
+          <ul>
+            {usuarios.map((usuario) => (
+              <li
+                data-icon="🥳"
+                key={usuario.email}
+              >{`  ${usuario.name} ${usuario.lastname}: 📧  ${usuario.email}`}</li>
+            ))}
+          </ul>
+        </Card>
+      </Container>
+    </div>
   );
 };
 
