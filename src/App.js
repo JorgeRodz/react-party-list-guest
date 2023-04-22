@@ -1,61 +1,26 @@
 import React from "react";
 import "./App.css";
 import { useState } from "react";
-import useFormulario from "./hooks/useFormulario";
-import Input from "./components/Input";
 import Card from "./components/Card";
 import Container from "./components/Container";
-import Button from "./components/Button";
+import UserForm from "./components/UserForm";
 
 const App = () => {
-  // hooks
   const [usuarios, setUsuarios] = useState([]);
-  const [dataForm, handleChange, reset] = useFormulario({
-    name: "",
-    lastname: "",
-    email: "",
-  });
 
   // handlers
-  const submit = (e) => {
-    e.preventDefault();
-    setUsuarios([...usuarios, dataForm]);
-    reset();
+  const submit = (usuario) => {
+    setUsuarios([...usuarios, usuario]);
   };
 
+  console.log(usuarios);
   return (
     <div style={{ marginTop: "5%" }}>
       <h1 className="main_title">🎉 Party List 🗒️</h1>
       <Container>
         <Card>
           <div style={{ padding: 20 }}>
-            <form onSubmit={submit}>
-              <Input
-                label="Nombre"
-                name="name"
-                onChange={handleChange}
-                placeholder="Nombre"
-                type="text"
-                value={dataForm.name}
-              />
-              <Input
-                label="Apellido"
-                name="lastname"
-                onChange={handleChange}
-                placeholder="Apellido"
-                type="text"
-                value={dataForm.lastname}
-              />
-              <Input
-                label="Correo"
-                name="email"
-                onChange={handleChange}
-                placeholder="Email"
-                type="email"
-                value={dataForm.email}
-              />
-              <Button>Enviar</Button>
-            </form>
+            <UserForm submit={submit}></UserForm>
           </div>
         </Card>
         <Card>

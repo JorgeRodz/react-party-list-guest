@@ -3,6 +3,8 @@
 This is a simple web application built with React that allows you to create a list of guests for a party.
 
 ## 📸 Screenshots
+![image](https://user-images.githubusercontent.com/13999498/233536920-0e083965-177f-4396-88cf-d75184efa4b9.png)
+
 
 ## 🗒️ Table of Contents
 
