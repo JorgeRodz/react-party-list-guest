@@ -13,7 +13,6 @@ const App = () => {
     setUsuarios([...usuarios, usuario]);
   };
 
-  console.log(usuarios);
   return (
     <div style={{ marginTop: "5%" }}>
       <h1 className="main_title">🎉 Party List 🗒️</h1>

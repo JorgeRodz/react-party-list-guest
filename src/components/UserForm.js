@@ -17,7 +17,6 @@ const UserForm = ({ submit }) => {
     reset();
   };
 
-  console.log(dataForm);
   return (
     <form onSubmit={handleSubmit}>
       <Input
